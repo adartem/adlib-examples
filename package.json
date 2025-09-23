@@ -1,0 +1,10 @@
+{
+  "name": "adlib-examples",
+  "version": "0.1.0",
+  "scripts": {
+    "test": "echo \"No tests yet\"",
+    "build": "echo \"No build yet\"",
+    "lint": "echo \"No lint yet\""
+  },
+  "dependencies": {}
+}
