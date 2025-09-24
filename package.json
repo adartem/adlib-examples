@@ -1,10 +1,17 @@
 {
   "name": "adlib-examples",
   "version": "0.1.0",
+  "description": "Exemples et démos AdLib pour ADARTEM",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"No tests yet\"",
-    "build": "echo \"No build yet\"",
-    "lint": "echo \"No lint yet\""
+    "test": "echo \"No tests yet\" && exit 0",
+    "lint": "eslint ."
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.50.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
 }
