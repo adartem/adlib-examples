@@ -1,0 +1,15 @@
+name: Sync labels
+
+on:
+  workflow_dispatch: # exécution manuelle via GitHub UI
+
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Sync labels
+        uses: crazy-max/ghaction-github-labeler@v4
+        with:
+          github-token: ${{ secrets.ORG_PAT }}
+          yaml-file: .github/labels.yml
