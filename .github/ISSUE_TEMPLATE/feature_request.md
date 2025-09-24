@@ -1,19 +1,20 @@
 ---
 name: ✨ Feature request
-about: Proposer une nouvelle fonctionnalité ou une amélioration
-title: "[FEATURE] "
+about: Proposer une nouvelle fonctionnalité ou amélioration
+title: "✨ [FEATURE] "
 labels: enhancement
 assignees: ''
 ---
 
-### Problème lié
-Décrivez le problème ou le besoin à l’origine de votre proposition.
+## Problème / besoin
+Quel problème souhaites-tu résoudre ?
 
-### Solution souhaitée
-Décrivez la fonctionnalité ou amélioration que vous proposez.
+## Solution proposée
+Décris la fonctionnalité ou amélioration attendue.
 
-### Alternatives considérées
-Expliquez si vous avez pensé à d’autres solutions.
+## Alternatives envisagées
+Autres solutions possibles ou limitations.
 
-### Contexte supplémentaire
-Informations utiles, captures, exemples d’usage.
+## Contexte supplémentaire
+Exemples, captures ou liens utiles.
+

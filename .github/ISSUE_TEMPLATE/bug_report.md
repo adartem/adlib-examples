@@ -1,24 +1,25 @@
 ---
 name: 🐛 Bug report
-about: Signaler un problème ou un comportement inattendu
-title: "[BUG] "
+about: Signaler un bug ou un comportement inattendu
+title: "🐛 [BUG] "
 labels: bug
 assignees: ''
 ---
 
-### Description
-Décrivez le bug de manière claire et concise.
+## Description
+Décris le problème rencontré de manière claire et concise.
 
-### Étapes pour reproduire
-1. 
-2. 
-3. 
+## Étapes pour reproduire
+1.
+2.
+3.
 
-### Comportement attendu
-Décrivez ce que vous pensiez obtenir.
+## Comportement attendu
+Ce que tu pensais que ça ferait.
 
-### Captures/logs
-Ajoutez des captures d’écran ou extraits de logs si utile.
+## Captures d’écran / Logs
+Ajoute tout élément utile pour comprendre le bug.
 
-### Contexte supplémentaire
-Informations supplémentaires si besoin.
+## Contexte supplémentaire
+Informations supplémentaires si nécessaire.
+
