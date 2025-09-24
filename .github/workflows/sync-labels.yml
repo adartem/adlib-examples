@@ -10,10 +10,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: adartem/adartem-ops
+          token: ${{ secrets.ORG_PAT }}
           path: ops
 
       - name: Sync labels
         uses: crazy-max/ghaction-github-labeler@v5
         with:
           github-token: ${{ secrets.ORG_PAT }}
-          config-file: ops/.github/labels.yml
+          yaml-file: ops/.github/labels.yml
