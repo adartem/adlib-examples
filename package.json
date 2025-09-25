@@ -1,17 +1,11 @@
 {
   "name": "adlib-examples",
   "version": "0.1.0",
-  "description": "Exemples et démos AdLib pour ADARTEM",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"No tests yet\" && exit 0",
-    "lint": "eslint ."
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "eslint": "^8.50.0"
-  },
-  "engines": {
-    "node": ">=18"
+    "lint": "echo \"No lint defined\"",
+    "test": "echo \"No tests defined\"",
+    "build-storybook": "echo \"Build storybook\" && mkdir -p storybook-static && echo 'storybook dummy' > storybook-static/index.html"
   }
 }
+
