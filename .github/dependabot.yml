@@ -1,0 +1,40 @@
+version: 2
+updates:
+  # ===============================
+  # Dépendances npm (librairies, frontend, storybook, docs…)
+  # ===============================
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "08:00"
+      timezone: "Europe/Paris"
+    open-pull-requests-limit: 10
+    labels:
+      - "🧹 Chore"
+      - "dependencies"
+    reviewers:
+      - "adartem/core-team"
+    assignees:
+      - "maintainer-username"
+
+  # ===============================
+  # GitHub Actions (workflows CI/CD)
+  # ===============================
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "08:00"
+      timezone: "Europe/Paris"
+    open-pull-requests-limit: 10
+    labels:
+      - "🧹 Chore"
+      - "dependencies"
+      - "⚙️ Ops"
+    reviewers:
+      - "adartem/ops-team"
+    assignees:
+      - "ci-maintainer"
