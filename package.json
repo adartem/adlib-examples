@@ -8,4 +8,3 @@
     "build-storybook": "echo \"Build storybook\" && mkdir -p storybook-static && echo 'storybook dummy' > storybook-static/index.html"
   }
 }
-

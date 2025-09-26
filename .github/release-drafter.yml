@@ -1,0 +1,61 @@
+# ===============================
+# Release Drafter configuration
+# ===============================
+
+# Nom et tag de la release (auto-incrémentation du patch par défaut)
+name-template: "v$NEXT_PATCH_VERSION"
+tag-template: "v$NEXT_PATCH_VERSION"
+
+# Catégories : regroupement des PR par labels
+categories:
+  - title: "✨ Features"
+    labels:
+      - "✨ Feature"
+      - "⚡ Enhancement"
+
+  - title: "🐛 Bug Fixes"
+    labels:
+      - "🐛 Bug"
+      - "🔙 Regression"
+
+  - title: "🎨 Design & UI"
+    labels:
+      - "🎨 Design"
+
+  - title: "📚 Documentation"
+    labels:
+      - "📚 Documentation"
+      - "💡 Example"
+
+  - title: "🛠️ Maintenance"
+    labels:
+      - "🧹 Chore"
+      - "♻️ Refactor"
+      - "⚙️ Ops"
+
+  - title: "🧪 Tests & CI/CD"
+    labels:
+      - "🧪 Test"
+
+  - title: "🤝 Contribution & Community"
+    labels:
+      - "🌱 Good first issue"
+      - "🙋 Help wanted"
+
+# Breaking changes (PRs labellées ainsi seront mises en avant)
+breaking:
+  label: "⚠️ Breaking"
+
+# Modèle de ligne pour chaque changement
+change-template: "- $TITLE (#$NUMBER) @$AUTHOR"
+
+# Modèle global de la release
+template: |
+  ## 🚀 What's Changed
+
+  $CHANGES
+
+  ---
+
+  🔖 Version: $NEXT_PATCH_VERSION  
+  _Generated automatically by [Release Drafter](https://github.com/release-drafter/release-drafter)._
