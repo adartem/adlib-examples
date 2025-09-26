@@ -3,51 +3,51 @@
 # ===============================
 
 # Nom et tag de la release (auto-incrémentation du patch par défaut)
-name-template: "v$NEXT_PATCH_VERSION"
-tag-template: "v$NEXT_PATCH_VERSION"
+name-template: 'v$NEXT_PATCH_VERSION'
+tag-template: 'v$NEXT_PATCH_VERSION'
 
 # Catégories : regroupement des PR par labels
 categories:
-  - title: "✨ Features"
+  - title: '✨ Features'
     labels:
-      - "✨ Feature"
-      - "⚡ Enhancement"
+      - '✨ Feature'
+      - '⚡ Enhancement'
 
-  - title: "🐛 Bug Fixes"
+  - title: '🐛 Bug Fixes'
     labels:
-      - "🐛 Bug"
-      - "🔙 Regression"
+      - '🐛 Bug'
+      - '🔙 Regression'
 
-  - title: "🎨 Design & UI"
+  - title: '🎨 Design & UI'
     labels:
-      - "🎨 Design"
+      - '🎨 Design'
 
-  - title: "📚 Documentation"
+  - title: '📚 Documentation'
     labels:
-      - "📚 Documentation"
-      - "💡 Example"
+      - '📚 Documentation'
+      - '💡 Example'
 
-  - title: "🛠️ Maintenance"
+  - title: '🛠️ Maintenance'
     labels:
-      - "🧹 Chore"
-      - "♻️ Refactor"
-      - "⚙️ Ops"
+      - '🧹 Chore'
+      - '♻️ Refactor'
+      - '⚙️ Ops'
 
-  - title: "🧪 Tests & CI/CD"
+  - title: '🧪 Tests & CI/CD'
     labels:
-      - "🧪 Test"
+      - '🧪 Test'
 
-  - title: "🤝 Contribution & Community"
+  - title: '🤝 Contribution & Community'
     labels:
-      - "🌱 Good first issue"
-      - "🙋 Help wanted"
+      - '🌱 Good first issue'
+      - '🙋 Help wanted'
 
 # Breaking changes (PRs labellées ainsi seront mises en avant)
 breaking:
-  label: "⚠️ Breaking"
+  label: '⚠️ Breaking'
 
 # Modèle de ligne pour chaque changement
-change-template: "- $TITLE (#$NUMBER) @$AUTHOR"
+change-template: '- $TITLE (#$NUMBER) @$AUTHOR'
 
 # Modèle global de la release
 template: |

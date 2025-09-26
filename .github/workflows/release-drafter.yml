@@ -6,7 +6,7 @@ on:
       - main
   pull_request:
     types: [closed]
-  workflow_dispatch:    # permet d'exécuter manuellement
+  workflow_dispatch: # permet d'exécuter manuellement
 
 jobs:
   update_release_draft:

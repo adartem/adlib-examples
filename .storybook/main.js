@@ -1,12 +1,9 @@
 module.exports = {
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: [
-    '@storybook/addon-essentials',
-    '@storybook/addon-links'
-  ],
+  addons: ['@storybook/addon-essentials', '@storybook/addon-links'],
   framework: '@storybook/react',
   core: {
-    builder: 'webpack5'
+    builder: 'webpack5',
   },
   webpackFinal: async (config) => {
     // Assurer que Babel compile JSX
@@ -14,9 +11,9 @@ module.exports = {
       test: /\.(js|jsx|ts|tsx)$/,
       exclude: /node_modules/,
       use: {
-        loader: 'babel-loader'
-      }
+        loader: 'babel-loader',
+      },
     });
     return config;
-  }
+  },
 };
