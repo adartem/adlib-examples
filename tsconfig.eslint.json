@@ -1,11 +1,15 @@
 {
   "extends": "./tsconfig.json",
-  "include": [
-    "src",
-    "tests",
+  "include": ["src", "tests"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "storybook-static",
+    "coverage",
+    "tmp-repos",
     ".storybook",
-    "vitest.config.ts",
-    "jest.config.js",
-    "eslint.config.js"
+    "**/*.config.ts",
+    "**/*.config.js"
   ]
 }
