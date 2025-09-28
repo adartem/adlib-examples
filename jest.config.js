@@ -1,14 +1,10 @@
 export default {
+  preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  transform: {
-    '^.+\\.(ts|tsx|js|jsx)$': 'babel-jest',
+  roots: ['<rootDir>/tests'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  setupFilesAfterEnv: ['<rootDir>/tests/setupTests.ts'],
+  moduleNameMapper: {
+    '\\.(css|scss|sass)$': 'identity-obj-proxy',
   },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  testPathIgnorePatterns: ['/node_modules/', '/dist/', '/build/', '/storybook-static/'],
-  collectCoverage: true,
-  collectCoverageFrom: [
-    'src/**/*.{js,jsx,ts,tsx}',
-    '!src/**/*.stories.{js,jsx,ts,tsx}',
-    '!src/index.{js,ts,tsx}',
-  ],
 };

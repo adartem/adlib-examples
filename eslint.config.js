@@ -1,43 +1,44 @@
-import js from '@eslint/js';
+// ESLint configuration pour ADARTEM (adlib-examples)
 import globals from 'globals';
+import prettier from 'eslint-config-prettier';
 import tseslint from 'typescript-eslint';
-import react from 'eslint-plugin-react';
-import prettier from 'eslint-plugin-prettier';
 
-export default [
-  js.configs.recommended,
-  ...tseslint.configs.recommended,
+export default tseslint.config(
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    ignores: [
+      'node_modules',
+      'dist',
+      'build',
+      'storybook-static',
+      'coverage',
+      'tmp-repos',
+      '**/.vitepress/**',
+      '**/*.d.ts',
+    ],
+  },
+  {
+    files: ['**/*.ts', '**/*.tsx', '**/*.js'],
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
+      parser: tseslint.parser,
+      parserOptions: {
+        project: './tsconfig.eslint.json',
+        sourceType: 'module',
+        ecmaVersion: 'latest',
+      },
       globals: {
         ...globals.browser,
         ...globals.node,
-        ...globals.jest,
-      },
-      parser: tseslint.parser,
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
+        ...globals.jest, // describe, it, expect
       },
     },
     plugins: {
-      react,
-      prettier,
+      '@typescript-eslint': tseslint.plugin,
     },
     rules: {
-      'prettier/prettier': 'error',
-      'react/react-in-jsx-scope': 'off', // inutile avec React 17+
-      'react/prop-types': 'off', // si tu utilises TypeScript pour les props
+      'no-unused-vars': 'warn',
+      'no-undef': 'error',
+      '@typescript-eslint/no-unused-vars': 'warn',
     },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-    ignores: ['dist/', 'build/', 'storybook-static/', 'coverage/', 'node_modules/'],
   },
-];
+  prettier,
+);

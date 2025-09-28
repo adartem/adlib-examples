@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    /* Langage & Module */
+    "target": "ES2022",
+    "lib": ["DOM", "ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "jsx": "react-jsx",
+
+    /* Sortie */
+    "outDir": "dist",
+    "noEmit": true,
+
+    /* Vérifications strictes */
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+
+    /* Tests & outils */
+    "types": ["jest", "node"],
+
+    /* Import paths */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+
+  "include": ["src", "tests", ".storybook", "vitest.config.ts", "jest.config.js"],
+  "exclude": ["node_modules", "dist", "build", "coverage", "storybook-static"]
+}
