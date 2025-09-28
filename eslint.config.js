@@ -1,10 +1,14 @@
-// ESLint configuration pour ADARTEM (adlib-examples)
+// ESLint configuration standardisée pour ADARTEM
+// Spécifique à adlib-examples : ignore Storybook/config et lint uniquement src + tests
+
 import globals from 'globals';
 import prettier from 'eslint-config-prettier';
-import tseslint from 'typescript-eslint';
+import pluginTs from '@typescript-eslint/eslint-plugin';
+import parserTs from '@typescript-eslint/parser';
 
-export default tseslint.config(
+export default [
   {
+    // Fichiers à ignorer complètement
     ignores: [
       'node_modules',
       'dist',
@@ -12,27 +16,30 @@ export default tseslint.config(
       'storybook-static',
       'coverage',
       'tmp-repos',
-      '**/.vitepress/**',
-      '**/*.d.ts',
+      'vite.config.ts',
+      'eslint.config.js',
+      'jest.config.js',
+      '.storybook/**',
+      'tests/setupTests.ts', // setup Jest → pas besoin de le lint strictement
     ],
   },
   {
-    files: ['**/*.ts', '**/*.tsx', '**/*.js'],
+    files: ['src/**/*.{ts,tsx,js}', 'tests/**/*.{ts,tsx,js}'],
     languageOptions: {
-      parser: tseslint.parser,
+      parser: parserTs,
       parserOptions: {
-        project: './tsconfig.eslint.json',
-        sourceType: 'module',
         ecmaVersion: 'latest',
+        sourceType: 'module',
+        project: './tsconfig.eslint.json', // tsconfig dédié au lint
       },
       globals: {
         ...globals.browser,
         ...globals.node,
-        ...globals.jest, // describe, it, expect
+        ...globals.jest, // autorise describe, it, expect
       },
     },
     plugins: {
-      '@typescript-eslint': tseslint.plugin,
+      '@typescript-eslint': pluginTs,
     },
     rules: {
       'no-unused-vars': 'warn',
@@ -40,5 +47,6 @@ export default tseslint.config(
       '@typescript-eslint/no-unused-vars': 'warn',
     },
   },
+  // Intégration avec Prettier
   prettier,
-);
+];
