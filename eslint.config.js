@@ -1,3 +1,6 @@
+// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
+import storybook from 'eslint-plugin-storybook';
+
 // ESLint configuration standardisée pour ADARTEM
 // Spécifique à adlib-examples : ignore Storybook/config et lint uniquement src + tests
 
@@ -46,7 +49,7 @@ export default [
       'no-undef': 'error',
       '@typescript-eslint/no-unused-vars': 'warn',
     },
-  },
-  // Intégration avec Prettier
+  }, // Intégration avec Prettier
   prettier,
+  ...storybook.configs['flat/recommended'],
 ];
