@@ -43,13 +43,18 @@ export default [
     },
     plugins: {
       '@typescript-eslint': pluginTs,
+      storybook,
     },
     rules: {
+      // Règles TypeScript
       'no-unused-vars': 'warn',
       'no-undef': 'error',
       '@typescript-eslint/no-unused-vars': 'warn',
+
+      // Règles Storybook (équivalent du "recommended")
+      ...storybook.configs.recommended.rules,
     },
-  }, // Intégration avec Prettier
+  },
+  // Intégration avec Prettier
   prettier,
-  ...storybook.configs['flat/recommended'],
 ];
